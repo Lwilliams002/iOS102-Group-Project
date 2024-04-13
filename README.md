@@ -15,7 +15,6 @@ MealSwap is an app that allows users to post their extra food and view others' f
 
 ### App Evaluation
 
-[Evaluation of your app across the following attributes]
 - **Category:** Social
 - **Mobile:** Mobile first (for now)
 - **Story:**  It helps users connect with their community, have new experiences, and reduce food waste
@@ -95,7 +94,7 @@ MealSwap is an app that allows users to post their extra food and view others' f
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/mealswap-wireframe.png">
 
 ### [BONUS] Digital Wireframes & Mockups
 
