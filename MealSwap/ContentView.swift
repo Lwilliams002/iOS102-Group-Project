@@ -24,5 +24,12 @@ struct ContentView: View {
                     .tabItem { Label("Settings", systemImage: "person") }
             }
         }
+        .padding()
     }
+}
+
+#Preview {
+    ContentView()
+        .environment(AuthManager())
+
 }

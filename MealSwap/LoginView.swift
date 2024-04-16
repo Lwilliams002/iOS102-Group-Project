@@ -45,3 +45,9 @@ struct LoginView: View {
         }
     }
 }
+
+#Preview {
+    LoginView()
+        .environment(AuthManager()) // <-- For the preview to work, pass an instance of AuthManager into the environment
+
+}
