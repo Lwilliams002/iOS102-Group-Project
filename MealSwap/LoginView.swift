@@ -8,11 +8,40 @@
 import SwiftUI
 
 struct LoginView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @Environment(AuthManager.self) var authManager // <-- Access the authManager from the environment
 
-#Preview {
-    LoginView()
+    @State private var email: String = ""
+    @State private var password: String = ""
+
+    var body: some View {
+        VStack {
+            Text("MealSwap!")
+                .font(.largeTitle)
+            // Email + password fields
+            VStack {
+                TextField("Email", text: $email)
+                SecureField("Password", text: $password)
+            }
+            .textFieldStyle(.roundedBorder) // <-- Style text fields (applies to both text fields within the VStack)
+            .textInputAutocapitalization(.never) // <-- No auto capitalization (can be annoying for emails and passwords)
+            .padding(40)
+
+            // Sign up + Login buttons
+            HStack {
+                Button("Sign Up") {
+                    print("Sign up user: \(email), \(password)")
+                    authManager.signUp(email: email, password: password) // <-- Sign up user via authManager
+
+                }
+                .buttonStyle(.borderedProminent) // <-- Style button
+
+                Button("Login") {
+                    print("Login user: \(email), \(password)")
+                    authManager.signIn(email: email, password: password) // <-- Sign in user via authManager
+
+                }
+                .buttonStyle(.bordered) // <-- Style button
+            }
+        }
+    }
 }
