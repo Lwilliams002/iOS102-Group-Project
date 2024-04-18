@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-        issue-#1
-    @State private var feeds: [Feed] = []
-  
     @Environment(AuthManager.self) var authManager
-        main
     
     var body: some View {
         VStack {
             TabView {
-                MealFeed()
-                    .tabItem { Label("Find Meals", systemImage: "fork.knife") } // Segue to MealFeed View
+                Text("Meals Feed")
+                    .tabItem { Label("Find Meals", systemImage: "fork.knife") }
                 Text("Create Meal")
                     .tabItem { Label("Post New", systemImage: "plus.circle") }
                 Text("Matched Meals")
@@ -30,7 +26,6 @@ struct ContentView: View {
         }
         .padding()
     }
-    
 }
 
 #Preview {
