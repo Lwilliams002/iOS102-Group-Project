@@ -18,6 +18,8 @@
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
 		15276A342BCAFE96008A9BDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */; };
+		ADD70FCE2BD1B9260010165D /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD70FCD2BD1B9260010165D /* FeedModel.swift */; };
+		ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD70FCF2BD1B9520010165D /* MealFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		15276A2E2BCAFE94008A9BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15276A302BCAFE96008A9BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADD70FCD2BD1B9260010165D /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		ADD70FCF2BD1B9520010165D /* MealFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 		15276A2B2BCAFE94008A9BDB /* MealSwap */ = {
 			isa = PBXGroup;
 			children = (
+				ADD70FCC2BD1B8E40010165D /* Models */,
 				15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */,
 				030B269A2BCCAB8E00174880 /* LoginView.swift */,
 				030B269E2BCCB5AF00174880 /* SettingsView.swift */,
@@ -73,6 +78,7 @@
 				030B26912BCCA9BA00174880 /* GoogleService-Info.plist */,
 				15276A302BCAFE96008A9BDB /* Assets.xcassets */,
 				15276A322BCAFE96008A9BDB /* Preview Content */,
+				ADD70FCF2BD1B9520010165D /* MealFeed.swift */,
 			);
 			path = MealSwap;
 			sourceTree = "<group>";
@@ -83,6 +89,14 @@
 				15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADD70FCC2BD1B8E40010165D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADD70FCD2BD1B9260010165D /* FeedModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				030B269F2BCCB5AF00174880 /* SettingsView.swift in Sources */,
+				ADD70FCE2BD1B9260010165D /* FeedModel.swift in Sources */,
 				030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */,
 				030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */,
 				15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,
+				ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
