@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView {
-                Text("Meals Feed")
+                MealFeed()
                     .tabItem { Label("Find Meals", systemImage: "fork.knife") } // Segue to MealFeed View
                 Text("Create Meal")
                     .tabItem { Label("Post New", systemImage: "plus.circle") }

@@ -15,48 +15,50 @@ struct MealFeed: View {
     @State private var isLoading: Bool = false
     
     var body: some View {
-        HStack{
-            Button("Feed"){
+        VStack{
+            HStack{
+                Button("Feed"){
+                    
+                }
+                .foregroundColor(.black)
+                .font(.system(size: 20, weight: .bold))
+                .padding()
+                .frame(width: 120, height: 50)
                 
+                Spacer()
+                Button("Follower"){
+                    
+                }
+                .foregroundColor(.black)
+                .font(.system(size: 20, weight: .bold))
+                .padding()
+                .frame(width: 120, height: 50)
             }
-            .foregroundColor(.black)
-            .font(.system(size: 20, weight: .bold))
-            .padding()
-            .frame(width: 120, height: 50)
+            .frame(width: 200)
             
-            Spacer()
-            Button("Follower"){
-                
-            }
-            .foregroundColor(.black)
-            .font(.system(size: 20, weight: .bold))
-            .padding()
-            .frame(width: 120, height: 50)
-        }
-        .frame(width: 200)
-        
 
-        ZStack{
-            RoundedRectangle(cornerRadius: 25.0)
-                .fill(.gray)
-                .overlay(
-                    VStack{
-                        if let mealImage = mealImage{
-                            Image(uiImage: mealImage)
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        Text(mealTitle)
-                            .font(.title)
-                            .foregroundStyle(.white)
-                    })
-        }
-        .frame(width: 350, height: 680)
-        .onAppear{
-            isLoading = true
-            Task{
-                await fetchMeal()
-                isLoading = false
+            ZStack{
+                RoundedRectangle(cornerRadius: 25.0)
+                    .fill(.gray)
+                    .overlay(
+                        VStack{
+                            if let mealImage = mealImage{
+                                Image(uiImage: mealImage)
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                            Text(mealTitle)
+                                .font(.title)
+                                .foregroundStyle(.white)
+                        })
+            }
+            .frame(width: 350, height: 680)
+            .onAppear{
+                isLoading = true
+                Task{
+                    await fetchFeed()
+                    isLoading = false
+                }
             }
         }
         
