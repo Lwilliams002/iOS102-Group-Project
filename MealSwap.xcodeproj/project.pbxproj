@@ -11,6 +11,11 @@
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
 		15276A342BCAFE96008A9BDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */; };
+		AD6E6D202BCC4AF1003E9A78 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E6D1F2BCC4AF1003E9A78 /* UserModel.swift */; };
+		AD6E6D292BCC54CB003E9A78 /* MealFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E6D282BCC54CB003E9A78 /* MealFeed.swift */; };
+		AD6E6D2B2BCCBD67003E9A78 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E6D2A2BCCBD67003E9A78 /* FeedModel.swift */; };
+		AD6E6D2D2BCDC647003E9A78 /* CreateFeedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E6D2C2BCDC647003E9A78 /* CreateFeedCard.swift */; };
+		AD6E6D2F2BD19110003E9A78 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E6D2E2BD19110003E9A78 /* MealModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		15276A2E2BCAFE94008A9BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15276A302BCAFE96008A9BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD6E6D1F2BCC4AF1003E9A78 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AD6E6D282BCC54CB003E9A78 /* MealFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeed.swift; sourceTree = "<group>"; };
+		AD6E6D2A2BCCBD67003E9A78 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		AD6E6D2C2BCDC647003E9A78 /* CreateFeedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeedCard.swift; sourceTree = "<group>"; };
+		AD6E6D2E2BD19110003E9A78 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +61,9 @@
 		15276A2B2BCAFE94008A9BDB /* MealSwap */ = {
 			isa = PBXGroup;
 			children = (
+				AD6E6D1E2BCC4AE0003E9A78 /* Models */,
 				15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */,
+				AD6E6D282BCC54CB003E9A78 /* MealFeed.swift */,
 				15276A2E2BCAFE94008A9BDB /* ContentView.swift */,
 				15276A302BCAFE96008A9BDB /* Assets.xcassets */,
 				15276A322BCAFE96008A9BDB /* Preview Content */,
@@ -65,6 +77,17 @@
 				15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AD6E6D1E2BCC4AE0003E9A78 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E6D2A2BCCBD67003E9A78 /* FeedModel.swift */,
+				AD6E6D1F2BCC4AF1003E9A78 /* UserModel.swift */,
+				AD6E6D2C2BCDC647003E9A78 /* CreateFeedCard.swift */,
+				AD6E6D2E2BD19110003E9A78 /* MealModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6E6D2F2BD19110003E9A78 /* MealModel.swift in Sources */,
 				15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */,
+				AD6E6D2B2BCCBD67003E9A78 /* FeedModel.swift in Sources */,
+				AD6E6D2D2BCDC647003E9A78 /* CreateFeedCard.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,
+				AD6E6D202BCC4AF1003E9A78 /* UserModel.swift in Sources */,
+				AD6E6D292BCC54CB003E9A78 /* MealFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
