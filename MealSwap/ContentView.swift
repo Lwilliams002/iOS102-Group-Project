@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+        issue-#1
     @State private var feeds: [Feed] = []
+  
+    @Environment(AuthManager.self) var authManager
+        main
     
     var body: some View {
         VStack {
@@ -19,7 +23,8 @@ struct ContentView: View {
                     .tabItem { Label("Post New", systemImage: "plus.circle") }
                 Text("Matched Meals")
                     .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
-                Text("Settings")
+                SettingsView()
+                    .environment(authManager)
                     .tabItem { Label("Settings", systemImage: "person") }
             }
         }
@@ -30,4 +35,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(AuthManager())
+
 }
