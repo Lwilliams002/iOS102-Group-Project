@@ -18,7 +18,7 @@ struct Meal: Codable, Identifiable, Equatable {
     let photoURL: String?
     let photoData: [Data]
     
-    init(id: String?, title: String, description: String, ingredients: [String], photoURL: String?, photoData: [Data] = []) {
+    init(id: String? = nil, title: String, description: String, ingredients: [String], photoURL: String? = nil, photoData: [Data] = []) {
         if let id {
             self.id = id
         } else {
