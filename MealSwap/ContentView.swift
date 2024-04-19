@@ -11,20 +11,17 @@ struct ContentView: View {
     @Environment(AuthManager.self) var authManager
     
     var body: some View {
-        VStack {
-            TabView {
-                MealFeed()
-                    .tabItem { Label("Find Meals", systemImage: "fork.knife") }
-                Text("Create Meal")
-                    .tabItem { Label("Post New", systemImage: "plus.circle") }
-                Text("Matched Meals")
-                    .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
-                SettingsView()
-                    .environment(authManager)
-                    .tabItem { Label("Settings", systemImage: "person") }
-            }
+        TabView {
+            MealFeed()
+                .tabItem { Label("Find Meals", systemImage: "fork.knife") }
+            CreateMealView()
+                .tabItem { Label("Post New", systemImage: "plus.circle") }
+            Text("Matched Meals")
+                .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
+            SettingsView()
+                .environment(authManager)
+                .tabItem { Label("Settings", systemImage: "person") }
         }
-        .padding()
     }
 }
 
