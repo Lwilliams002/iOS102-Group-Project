@@ -15,13 +15,13 @@ struct MealCard: View {
             if let meal {
                 VStack {
                     HStack {
-                        titleLabel(text: meal.strMeal)
+                        titleLabel(text: meal.title)
                         Spacer()
                     }
                     Spacer()
                 }
                 .background(
-                    AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                    AsyncImage(url: URL(string: meal.photoURL ?? "")) { image in
                             image
                                 .resizable()
                                 .scaledToFill()
