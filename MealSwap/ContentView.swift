@@ -15,7 +15,7 @@ struct ContentView: View {
             TabView {
                 MealFeed()
                     .tabItem { Label("Find Meals", systemImage: "fork.knife") }
-                Text("Create Meal")
+                CreateMealView()
                     .tabItem { Label("Post New", systemImage: "plus.circle") }
                 Text("Matched Meals")
                     .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
