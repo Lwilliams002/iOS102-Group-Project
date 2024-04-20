@@ -11,6 +11,7 @@
 		030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269A2BCCAB8E00174880 /* LoginView.swift */; };
 		030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269C2BCCAD3500174880 /* AuthManager.swift */; };
 		030B269F2BCCB5AF00174880 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269E2BCCB5AF00174880 /* SettingsView.swift */; };
+		03F631702BD357DB00698C99 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6316F2BD357DB00698C99 /* SignUpView.swift */; };
 		15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */; };
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		030B269A2BCCAB8E00174880 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		030B269C2BCCAD3500174880 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		030B269E2BCCB5AF00174880 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		03F6316F2BD357DB00698C99 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		15276A292BCAFE94008A9BDB /* MealSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSwapApp.swift; sourceTree = "<group>"; };
 		15276A2E2BCAFE94008A9BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				030B269A2BCCAB8E00174880 /* LoginView.swift */,
 				030B269E2BCCB5AF00174880 /* SettingsView.swift */,
 				030B269C2BCCAD3500174880 /* AuthManager.swift */,
+				03F6316F2BD357DB00698C99 /* SignUpView.swift */,
 				15276A2E2BCAFE94008A9BDB /* ContentView.swift */,
 				030B26912BCCA9BA00174880 /* GoogleService-Info.plist */,
 				15276A302BCAFE96008A9BDB /* Assets.xcassets */,
@@ -194,6 +197,7 @@
 				030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */,
 				030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */,
 				15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */,
+				03F631702BD357DB00698C99 /* SignUpView.swift in Sources */,
 				159B817C2BD2012E000E7CF4 /* CreateMealView.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,
 				ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */,
