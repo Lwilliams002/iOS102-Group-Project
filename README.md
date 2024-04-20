@@ -128,3 +128,4 @@ MealSwap is an app that allows users to post their extra food and view others' f
 
 ### Sprint 1
 <img src= "https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/sprint-1-demo.gif" width=350>
+https://www.loom.com/share/cb1ae4a45d144f07abbeac080bc8b18a?sid=56682de0-5ded-4944-a84f-3d49edf3f29
