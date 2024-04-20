@@ -32,13 +32,14 @@ class AuthManager {
     }
 
     // https://firebase.google.com/docs/auth/ios/start#sign_up_new_users
-    func signUp(email: String, password: String, userName: String, firstName: String, lastName:String, about: String, city: String, state: String, isVegan: Bool, isVegetarian: Bool, isPescetarian: Bool, isDairyFree: Bool, isGlutenFree: Bool, isRawFood: Bool, isKeto:Bool) {
+    func signUp(email: String, password: String, userName: String, firstName: String, lastName:String, about: String, city: String, state: String, isVegan: Bool, isVegetarian: Bool, isPescetarian: Bool, isDairyFree: Bool, isGlutenFree: Bool, isRawFood: Bool, isKeto:Bool, onFailure: @escaping (String, String) -> Void) {
         Task {
             do {
                 let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
                 user = authResult.user // <-- Set the user
             } catch {
-                print(error)
+                // Unable to create user
+                onFailure("Unable to create user", error.localizedDescription)
             }
             
             guard let userID = Auth.auth().currentUser?.uid else { return }
@@ -46,7 +47,8 @@ class AuthManager {
             do{
                 try await db.collection("Users").document("\(userID)").setData(["email": email, "firstName": firstName, "lastName": lastName, "about": about, "city": city, "state": state, "isVegan": isVegan, "isVegetarian": isVegetarian, "isPescetarian": isPescetarian, "isDairyFree": isDairyFree, "isGlutenFree": isGlutenFree, "isRawFood": isRawFood, "isKeo": isKeto, "userID": userID])
             } catch {
-                print(error)
+                // Unable to add user to db
+                onFailure("Unable to add user to database", error.localizedDescription)
             }
             
         }
