@@ -13,23 +13,38 @@
 		030B26992BCCAA4C00174880 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 030B26982BCCAA4C00174880 /* FirebaseFirestoreSwift */; };
 		030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269A2BCCAB8E00174880 /* LoginView.swift */; };
 		030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269C2BCCAD3500174880 /* AuthManager.swift */; };
-		030B269F2BCCB5AF00174880 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269E2BCCB5AF00174880 /* SettingsView.swift */; };
 		15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */; };
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
 		15276A342BCAFE96008A9BDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */; };
+		831EA2182BD32C430082A02A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EA2172BD32C430082A02A /* ProfileViewModel.swift */; };
+		831EA21A2BD3323A0082A02A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831EA2192BD3323A0082A02A /* UserModel.swift */; };
+		833E48962BD34A860025E044 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E48952BD34A850025E044 /* SettingsView.swift */; };
+		833E489A2BD34C3A0025E044 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E48992BD34C3A0025E044 /* AccountView.swift */; };
+		833E489C2BD3806B0025E044 /* DietaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E489B2BD3806B0025E044 /* DietaryView.swift */; };
+		833E489E2BD381120025E044 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E489D2BD381120025E044 /* AboutView.swift */; };
+		833E48A02BD3813E0025E044 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E489F2BD3813E0025E044 /* FeedbackView.swift */; };
+		833E48A22BD3B17A0025E044 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E48A12BD3B17A0025E044 /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		030B26912BCCA9BA00174880 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		030B269A2BCCAB8E00174880 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		030B269C2BCCAD3500174880 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		030B269E2BCCB5AF00174880 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		15276A292BCAFE94008A9BDB /* MealSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSwapApp.swift; sourceTree = "<group>"; };
 		15276A2E2BCAFE94008A9BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15276A302BCAFE96008A9BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		831EA2172BD32C430082A02A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		831EA2192BD3323A0082A02A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		831EA21B2BD346580082A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		833E48952BD34A850025E044 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		833E48992BD34C3A0025E044 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		833E489B2BD3806B0025E044 /* DietaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryView.swift; sourceTree = "<group>"; };
+		833E489D2BD381120025E044 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		833E489F2BD3813E0025E044 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		833E48A12BD3B17A0025E044 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +80,10 @@
 		15276A2B2BCAFE94008A9BDB /* MealSwap */ = {
 			isa = PBXGroup;
 			children = (
+				831EA21B2BD346580082A02A /* Info.plist */,
 				15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */,
 				030B269A2BCCAB8E00174880 /* LoginView.swift */,
-				030B269E2BCCB5AF00174880 /* SettingsView.swift */,
+				833E48982BD34BF20025E044 /* Settings */,
 				030B269C2BCCAD3500174880 /* AuthManager.swift */,
 				15276A2E2BCAFE94008A9BDB /* ContentView.swift */,
 				030B26912BCCA9BA00174880 /* GoogleService-Info.plist */,
@@ -83,6 +99,21 @@
 				15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		833E48982BD34BF20025E044 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				833E48952BD34A850025E044 /* SettingsView.swift */,
+				833E48A12BD3B17A0025E044 /* RatingView.swift */,
+				833E489D2BD381120025E044 /* AboutView.swift */,
+				833E489B2BD3806B0025E044 /* DietaryView.swift */,
+				833E489F2BD3813E0025E044 /* FeedbackView.swift */,
+				833E48992BD34C3A0025E044 /* AccountView.swift */,
+				831EA2172BD32C430082A02A /* ProfileViewModel.swift */,
+				831EA2192BD3323A0082A02A /* UserModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,10 +195,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030B269F2BCCB5AF00174880 /* SettingsView.swift in Sources */,
+				833E48962BD34A860025E044 /* SettingsView.swift in Sources */,
+				833E489C2BD3806B0025E044 /* DietaryView.swift in Sources */,
+				831EA2182BD32C430082A02A /* ProfileViewModel.swift in Sources */,
+				833E48A22BD3B17A0025E044 /* RatingView.swift in Sources */,
+				831EA21A2BD3323A0082A02A /* UserModel.swift in Sources */,
+				833E489E2BD381120025E044 /* AboutView.swift in Sources */,
 				030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */,
+				833E489A2BD34C3A0025E044 /* AccountView.swift in Sources */,
 				030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */,
 				15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */,
+				833E48A02BD3813E0025E044 /* FeedbackView.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +343,8 @@
 				DEVELOPMENT_TEAM = A4J2ZGNF23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealSwap/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to select and display images for your profile.\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -334,6 +374,8 @@
 				DEVELOPMENT_TEAM = A4J2ZGNF23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealSwap/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to select and display images for your profile.\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

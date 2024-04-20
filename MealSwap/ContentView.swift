@@ -19,7 +19,7 @@ struct ContentView: View {
                     .tabItem { Label("Post New", systemImage: "plus.circle") }
                 Text("Matched Meals")
                     .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
-                SettingsView()
+                SettingsView(user: UserInfo.MOCK_USER)
                     .environment(authManager)
                     .tabItem { Label("Settings", systemImage: "person") }
             }
