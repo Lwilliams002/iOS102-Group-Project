@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth // <-- Import Firebase Auth
+import Firebase
 
 @Observable // <-- Make class observable
 class AuthManager {
@@ -31,7 +32,7 @@ class AuthManager {
     }
 
     // https://firebase.google.com/docs/auth/ios/start#sign_up_new_users
-    func signUp(email: String, password: String) {
+    func signUp(email: String, password: String, userName: String, firstName: String, lastName:String, about: String, city: String, state: String, isVegan: Bool, isVegetarian: Bool, isPescetarian: Bool, isDairyFree: Bool, isGlutenFree: Bool, isRawFood: Bool, isKeto:Bool) {
         Task {
             do {
                 let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
@@ -39,8 +40,16 @@ class AuthManager {
             } catch {
                 print(error)
             }
+            
+            guard let userID = Auth.auth().currentUser?.uid else { return }
+            let db = Firestore.firestore()
+            do{
+                try await db.collection("Users").document("\(userID)").setData(["email": email, "firstName": firstName, "lastName": lastName, "about": about, "city": city, "state": state, "isVegan": isVegan, "isVegetarian": isVegetarian, "isPescetarian": isPescetarian, "isDairyFree": isDairyFree, "isGlutenFree": isGlutenFree, "isRawFood": isRawFood, "isKeo": isKeto, "userID": userID])
+            } catch {
+                print(error)
+            }
+            
         }
-
     }
 
     // https://firebase.google.com/docs/auth/ios/start#sign_in_existing_users
@@ -52,8 +61,12 @@ class AuthManager {
             } catch {
                 print(error)
             }
+            
+            
         }
     }
+    
+        
 
     func signOut() {
         do {
