@@ -10,25 +10,38 @@
 		030B26922BCCA9BA00174880 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030B26912BCCA9BA00174880 /* GoogleService-Info.plist */; };
 		030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269A2BCCAB8E00174880 /* LoginView.swift */; };
 		030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269C2BCCAD3500174880 /* AuthManager.swift */; };
-
+		030B269F2BCCB5AF00174880 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030B269E2BCCB5AF00174880 /* SettingsView.swift */; };
+		03F631702BD357DB00698C99 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6316F2BD357DB00698C99 /* SignUpView.swift */; };
 		15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */; };
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
 		15276A342BCAFE96008A9BDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */; };
-
+		159919E62BD443840036D02F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 159919E52BD443840036D02F /* FirebaseAuth */; };
+		159919E82BD443840036D02F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 159919E72BD443840036D02F /* FirebaseFirestore */; };
+		159919EA2BD443840036D02F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 159919E92BD443840036D02F /* FirebaseFirestoreSwift */; };
+		159B817C2BD2012E000E7CF4 /* CreateMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B817B2BD2012E000E7CF4 /* CreateMealView.swift */; };
+		159B817E2BD207CD000E7CF4 /* MealCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B817D2BD207CD000E7CF4 /* MealCard.swift */; };
+		159B818D2BD21A2A000E7CF4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B818C2BD21A2A000E7CF4 /* Meal.swift */; };
+		159B818F2BD22590000E7CF4 /* example-meal.json in Resources */ = {isa = PBXBuildFile; fileRef = 159B818E2BD22590000E7CF4 /* example-meal.json */; };
+		ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD70FCF2BD1B9520010165D /* MealFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		030B26912BCCA9BA00174880 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		030B269A2BCCAB8E00174880 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		030B269C2BCCAD3500174880 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-
+		030B269E2BCCB5AF00174880 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		03F6316F2BD357DB00698C99 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		15276A292BCAFE94008A9BDB /* MealSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSwapApp.swift; sourceTree = "<group>"; };
 		15276A2E2BCAFE94008A9BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15276A302BCAFE96008A9BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-
+		159B817B2BD2012E000E7CF4 /* CreateMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMealView.swift; sourceTree = "<group>"; };
+		159B817D2BD207CD000E7CF4 /* MealCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCard.swift; sourceTree = "<group>"; };
+		159B818C2BD21A2A000E7CF4 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		159B818E2BD22590000E7CF4 /* example-meal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "example-meal.json"; sourceTree = "<group>"; };
+		ADD70FCF2BD1B9520010165D /* MealFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +77,10 @@
 		15276A2B2BCAFE94008A9BDB /* MealSwap */ = {
 			isa = PBXGroup;
 			children = (
-
+				ADD70FCC2BD1B8E40010165D /* Models */,
 				15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */,
 				030B269A2BCCAB8E00174880 /* LoginView.swift */,
-				833E48982BD34BF20025E044 /* Settings */,
+				030B269E2BCCB5AF00174880 /* SettingsView.swift */,
 				030B269C2BCCAD3500174880 /* AuthManager.swift */,
 				03F6316F2BD357DB00698C99 /* SignUpView.swift */,
 				15276A2E2BCAFE94008A9BDB /* ContentView.swift */,
@@ -90,7 +103,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-
+		ADD70FCC2BD1B8E40010165D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				159B818C2BD21A2A000E7CF4 /* Meal.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,12 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
+				159B818D2BD21A2A000E7CF4 /* Meal.swift in Sources */,
+				030B269F2BCCB5AF00174880 /* SettingsView.swift in Sources */,
+				159B817E2BD207CD000E7CF4 /* MealCard.swift in Sources */,
 				030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */,
-				833E489A2BD34C3A0025E044 /* AccountView.swift in Sources */,
 				030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */,
 				15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */,
-
+				03F631702BD357DB00698C99 /* SignUpView.swift in Sources */,
+				159B817C2BD2012E000E7CF4 /* CreateMealView.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,
 				ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */,
 			);
@@ -317,8 +337,6 @@
 				DEVELOPMENT_TEAM = A4J2ZGNF23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MealSwap/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to select and display images for your profile.\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,8 +366,6 @@
 				DEVELOPMENT_TEAM = A4J2ZGNF23;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MealSwap/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to your photo library to select and display images for your profile.\n";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
