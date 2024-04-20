@@ -6,6 +6,7 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
+5. [Sprint Progress](#Sprint-Progress)
 
 ## Overview
 
@@ -28,9 +29,9 @@ MealSwap is an app that allows users to post their extra food and view others' f
 
 **Required Must-have Stories**
 
-- [ ] User can register/sign in to an account
-- [ ] User can log out
-- [ ] User can create a new meal record (ingredients, title, photos,...)
+- [X] User can register/sign in to an account
+- [X] User can log out
+- [X] User can create a new meal record (ingredients, title, photos,...)
 - [ ] User can swipe through a feed of meals and "swipe right" to indicate they would want to swap for that meal
 - [ ] If two users' meals are found to be a match, both are notified and those meals are marked as matched(swap pending)
 - [ ] User can see matched meals that haven't been swapped yet and confirm a swap with their desired meal
@@ -49,12 +50,12 @@ MealSwap is an app that allows users to post their extra food and view others' f
 
 ### 2. Screen Archetypes
 
-- [ ] [**Login Screen**]
+- [X] [**Login Screen**]
 * [Required Feature: User can register/sign in to an account]
 * * Optional Feature: Users can specify dietary requirements and meals are filtered to fit these (when creating an account)
-- [ ] [**Create Meal Screen**]
+- [X] [**Create Meal Screen**]
 * [Required Feature: User can create a new meal record (ingredients, title, photos,...)]
-- [ ] [**Meals Feed Screen**]
+- [X] [**Meals Feed Screen**]
 - [Required Feature: User can swipe through a feed of meals and "swipe right" to indicate they would want to swap for that meal]
 - [Required Feature: If two users' meals are found to be a match, both are notified and those meals are marked as matched(swap pending)]
 * Optional Feature: Users only see meals from other users in the same area
@@ -66,7 +67,7 @@ MealSwap is an app that allows users to post their extra food and view others' f
 - [Required Feature: User can see matched meals that haven't been swapped yet and confirm a swap with their desired meal]
 * Optional Feature: Users who have matched on meals can chat/organize an exchange
 * Users can leave comments/ratings/likes on meals they've recieved (and these are displayed on a user's profile)
-- [ ] [**Settings Screen**]
+- [X] [**Settings Screen**]
 - [Required Feature: User can log out]
 * Optional Feature: Users can specify dietary requirements and meals are filtered to fit these
 * Optional Feature: User can edit profile info
@@ -76,10 +77,10 @@ MealSwap is an app that allows users to post their extra food and view others' f
 **Tab Navigation** (Tab to Screen)
 
 
-- [ ] [First Tab - Meals Feed]
-- [ ] [Second Tab - Create Meal]
-- [ ] [Third Tab - Matched Meals]
-- [ ] [Fourth Tab - Settings]
+- [X] [First Tab - Meals Feed]
+- [X] [Second Tab - Create Meal]
+- [X] [Third Tab - Matched Meals]
+- [X] [Fourth Tab - Settings]
 
 **Flow Navigation** (Screen to Screen)
 
@@ -121,3 +122,9 @@ MealSwap is an app that allows users to post their extra food and view others' f
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+## Sprint Progress
+
+### Sprint 1
+<img src= "https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/sprint-1-demo.gif" width=350>
