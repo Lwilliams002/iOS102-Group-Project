@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MealCard: View {
     @Binding var meal: Meal?
+    @State private var offset: CGSize = .zero
+    private let swipeThreshold: Double = 200
     
     var body: some View {
         VStack {
@@ -31,6 +33,32 @@ struct MealCard: View {
             }
         }
         .frame(width: 350, height: 600)
+        .rotationEffect(.degrees(offset.width / 20.0))
+        .opacity(3 - abs(offset.width) / swipeThreshold * 3)
+        .offset(CGSize(width: offset.width, height: 0))
+        .gesture(DragGesture()
+                    .onChanged { gesture in
+                        let translation = gesture.translation
+                        offset = translation
+                    }.onEnded{ gesture in
+                        if gesture.translation.width > swipeThreshold {
+                            print("👉 Swiped right")
+                            
+                            // <-- Call swiped right closure
+                            
+                        } else if gesture.translation.width < -swipeThreshold {
+                            print("👈 Swiped left")
+                            
+                            // <-- Call swiped left closure
+                            
+                        } else {
+                            print("🚫 Swipe canceled")
+                            withAnimation(.bouncy) {
+                                offset = .zero
+                            }
+                        }
+                    }
+                )
 //        .animation(.easeInOut, value: meal)
     }
     
