@@ -26,6 +26,10 @@ struct SignUpView: View {
     @State private var isKeto: Bool = false
     @State private var isRawFood: Bool = false
     @State private var isPaleo: Bool = false
+    
+    @State private var showingErrorAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
 
     private var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
     var body: some View {
@@ -76,14 +80,42 @@ struct SignUpView: View {
                 Section() {
                     Button("Sign Up") {
                         print("Sign up user: \(email), \(password)")
-                        authManager.signUp(email: email, password: password, userName: userName, firstName: firstName, lastName: lastName, about: aboutMe, city: city, state: state, isVegan: isVegan, isVegetarian: isVegetarian, isPescetarian: isPescetarian, isDairyFree: isDairyFree, isGlutenFree: isGlutenFree, isRawFood: isRawFood, isKeto: isKeto)
+                        authManager.signUp(email: email, password: password, userName: userName, firstName: firstName, lastName: lastName, about: aboutMe, city: city, state: state, isVegan: isVegan, isVegetarian: isVegetarian, isPescetarian: isPescetarian, isDairyFree: isDairyFree, isGlutenFree: isGlutenFree, isRawFood: isRawFood, isKeto: isKeto) { errorTitle, errorDescription in
+                            alertTitle = errorTitle
+                            alertMessage = errorDescription
+                            showingErrorAlert = true
+                        }
                         
                     }
                 }
                 
             }
             .navigationTitle("Create Accout")
+            .alert(alertTitle, isPresented: $showingErrorAlert) {
+                Button("OK", action: clearAllInputs)
+            } message: {
+                Text(alertMessage)
+            }
         }
+    }
+    
+    private func clearAllInputs() {
+        firstName = ""
+        lastName = ""
+        userName = ""
+        city = ""
+        state = ""
+        aboutMe = ""
+        email = ""
+        password = ""
+        isVegan = false
+        isPescetarian = false
+        isVegetarian = false
+        isGlutenFree = false
+        isDairyFree = false
+        isKeto = false
+        isRawFood = false
+        isPaleo = false
     }
 }
 
