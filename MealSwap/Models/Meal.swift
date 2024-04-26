@@ -6,8 +6,30 @@
 //
 
 import Foundation
+import SwiftUI
 
 // TODO: - handle Firebase persistence once that's set up
+
+class MealStore: ObservableObject {
+    @Published var matchedMeals: [Meal] = []
+    
+    init(matchedMeals: [Meal]) {
+        self.matchedMeals = matchedMeals
+    }
+    
+    func bindingForIndex(_ index: Int) -> Binding<Meal?> {
+        Binding<Meal?>(
+            get: {
+                guard self.matchedMeals.indices.contains(index) else { return nil }
+                return self.matchedMeals[index]
+            },
+            set: { newValue in
+                guard let newValue = newValue, self.matchedMeals.indices.contains(index) else { return }
+                self.matchedMeals[index] = newValue
+            }
+        )
+    }
+}
 
 /// This is our usable Meal struct, which we can use for user-generated meals as well as mocked meals from an API
 struct Meal: Codable, Identifiable, Equatable {

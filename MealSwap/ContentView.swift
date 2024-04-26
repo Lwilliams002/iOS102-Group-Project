@@ -16,7 +16,7 @@ struct ContentView: View {
                 .tabItem { Label("Find Meals", systemImage: "fork.knife") }
             CreateMealView()
                 .tabItem { Label("Post New", systemImage: "plus.circle") }
-            Text("Matched Meals")
+            MatchedView()
                 .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
             SettingsView()
                 .environment(authManager)

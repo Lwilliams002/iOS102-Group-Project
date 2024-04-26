@@ -15,6 +15,7 @@ struct MealFeed: View {
             buttonRow
                 .frame(width: 200)
             MealCard(meal: $meal)
+                .frame(width: 350, height: 600)
         }
         .task{ await fetchMeal() }
         // at least just for debugging:
