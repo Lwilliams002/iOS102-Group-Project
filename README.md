@@ -34,7 +34,7 @@ MealSwap is an app that allows users to post their extra food and view others' f
 - [X] User can create a new meal record (ingredients, title, photos,...)
 - [ ] User can swipe through a feed of meals and "swipe right" to indicate they would want to swap for that meal
 - [ ] If two users' meals are found to be a match, both are notified and those meals are marked as matched(swap pending)
-- [ ] User can see matched meals that haven't been swapped yet and confirm a swap with their desired meal
+- [X] User can see matched meals that haven't been swapped yet and confirm a swap with their desired meal
 
 
 **Optional Nice-to-have Stories**
@@ -63,7 +63,7 @@ MealSwap is an app that allows users to post their extra food and view others' f
 - [ ] [**User Profile Screen**]
 * Optional Feature: User can see the profile of the user whose meal they are looking at, and see the ratings of all their meals
 * Optional Feature: User can follow other another user
-- [ ] [**Matched Meals Screen**]
+- [X] [**Matched Meals Screen**]
 - [Required Feature: User can see matched meals that haven't been swapped yet and confirm a swap with their desired meal]
 * Optional Feature: Users who have matched on meals can chat/organize an exchange
 * Users can leave comments/ratings/likes on meals they've recieved (and these are displayed on a user's profile)
@@ -129,3 +129,6 @@ MealSwap is an app that allows users to post their extra food and view others' f
 ### Sprint 1
 <img src= "https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/sprint-1-demo.gif" width=350>
 https://www.loom.com/share/cb1ae4a45d144f07abbeac080bc8b18a?sid=56682de0-5ded-4944-a84f-3d49edf3f29
+
+### Sprint 2
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/milestone2-demo.gif" width=350>
