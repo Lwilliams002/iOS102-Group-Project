@@ -31,7 +31,6 @@ struct MatchedDetailView: View {
                                     systemImage: "bubble.right",
                                     color: .init(uiColor: .systemGray6))
                     }
-                    .foregroundStyle(.primary)
                     Spacer()
                     Button {
                         showingSwappedConfirmation = true
@@ -42,6 +41,7 @@ struct MatchedDetailView: View {
                     }
                     
                 }
+                .foregroundStyle(.primary)
                 .opacity(isAvailable ? 1 : 0.6)
                 .padding(.top)
             }
@@ -94,4 +94,5 @@ struct MatchedDetailView: View {
 
 #Preview {
     MatchedDetailView(meal: .constant(Meal.example))
+        .environment(AuthManager(isMocked: true))
 }

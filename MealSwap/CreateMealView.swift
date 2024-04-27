@@ -14,6 +14,8 @@ struct CreateMealView: View {
     
     @State private var newIngredient = ""
     
+    @State private var showingPostedAlert = false
+    
     var isValid: Bool {
         // For now, valid as long as there's a title
         !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
@@ -35,6 +37,10 @@ struct CreateMealView: View {
                     submitButton
                 }
             }
+            .alert("Meal posted successfully!", isPresented: $showingPostedAlert) {
+                Button(action: {}) {
+                    Text("OK") }
+            }
         }
     }
     
@@ -42,6 +48,8 @@ struct CreateMealView: View {
         let meal = Meal(title: title, description: description, ingredients: ingredients)
         // TODO: - add meal to database
         print("Posting \(meal)")
+        
+        showingPostedAlert = true
         
         title = ""
         description = ""

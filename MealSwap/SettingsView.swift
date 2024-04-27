@@ -21,9 +21,9 @@ struct SettingsView: View {
               .background(Color.gray)
               .clipShape(Circle())
               .padding()
-            Text("User Name")
+            Text(authManager.userEmail ?? "Username")
                 .padding(5)
-            Text("City, State")
+            Text("New York, New York")
             Spacer()
             Button("Sign out") {
                 print("User sign out")
@@ -31,8 +31,6 @@ struct SettingsView: View {
             }
             .buttonStyle(.borderedProminent)
             .padding()
-
-            
         }
     }
 }
