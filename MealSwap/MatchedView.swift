@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MatchedView: View {
+    @Environment(AuthManager.self) var authManager: AuthManager
+    
     @State private var mealStore: MealStore = MealStore(matchedMeals: [.example!, .example2!, .example3!])
     
     
@@ -23,6 +25,7 @@ struct MatchedView: View {
                     ForEach(mealStore.matchedMeals.indices, id: \.self) { index in
                         NavigationLink {
                             MatchedDetailView(meal: self.mealStore.bindingForIndex(index))
+                                .environment(authManager)
                         } label: {
                             MealCard(meal: self.mealStore.bindingForIndex(index), smallTextDisplay: true)
                         }
@@ -38,4 +41,5 @@ struct MatchedView: View {
 
 #Preview {
     MatchedView()
+        .environment(AuthManager(isMocked: true))
 }

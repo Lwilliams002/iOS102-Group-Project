@@ -17,6 +17,9 @@
 		1518EDC02BDCA56E0094BF09 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1518EDBF2BDCA56E0094BF09 /* FirebaseAuth */; };
 		1518EDC22BDCA56E0094BF09 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1518EDC12BDCA56E0094BF09 /* FirebaseFirestore */; };
 		1518EDC42BDCA56E0094BF09 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1518EDC32BDCA56E0094BF09 /* FirebaseFirestoreSwift */; };
+		1518EDC82BDCAE440094BF09 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1518EDC72BDCAE440094BF09 /* ChatView.swift */; };
+		1518EDCA2BDCAF4E0094BF09 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1518EDC92BDCAF4E0094BF09 /* MessageManager.swift */; };
+		1518EDCC2BDCAF7D0094BF09 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1518EDCB2BDCAF7D0094BF09 /* Message.swift */; };
 		15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */; };
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		03F6316F2BD357DB00698C99 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1518EDBA2BD9EB230094BF09 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 		1518EDBC2BDC3A0A0094BF09 /* MatchedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedDetailView.swift; sourceTree = "<group>"; };
+		1518EDC72BDCAE440094BF09 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		1518EDC92BDCAF4E0094BF09 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		1518EDCB2BDCAF7D0094BF09 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		15276A292BCAFE94008A9BDB /* MealSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSwapApp.swift; sourceTree = "<group>"; };
 		15276A2E2BCAFE94008A9BDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,7 +102,10 @@
 				159B817D2BD207CD000E7CF4 /* MealCard.swift */,
 				1518EDBA2BD9EB230094BF09 /* MatchedView.swift */,
 				1518EDBC2BDC3A0A0094BF09 /* MatchedDetailView.swift */,
+				1518EDC72BDCAE440094BF09 /* ChatView.swift */,
 				159B818E2BD22590000E7CF4 /* example-meal.json */,
+				1518EDC92BDCAF4E0094BF09 /* MessageManager.swift */,
+				1518EDCB2BDCAF7D0094BF09 /* Message.swift */,
 			);
 			path = MealSwap;
 			sourceTree = "<group>";
@@ -203,10 +212,13 @@
 				030B269B2BCCAB8E00174880 /* LoginView.swift in Sources */,
 				030B269D2BCCAD3500174880 /* AuthManager.swift in Sources */,
 				15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */,
+				1518EDC82BDCAE440094BF09 /* ChatView.swift in Sources */,
 				1518EDBD2BDC3A0A0094BF09 /* MatchedDetailView.swift in Sources */,
 				1518EDBB2BD9EB230094BF09 /* MatchedView.swift in Sources */,
 				03F631702BD357DB00698C99 /* SignUpView.swift in Sources */,
 				159B817C2BD2012E000E7CF4 /* CreateMealView.swift in Sources */,
+				1518EDCA2BDCAF4E0094BF09 /* MessageManager.swift in Sources */,
+				1518EDCC2BDCAF7D0094BF09 /* Message.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,
 				ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */,
 			);

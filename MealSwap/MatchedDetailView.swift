@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MatchedDetailView: View {
+    @Environment(AuthManager.self) var authManager: AuthManager
+    
     @Binding var meal: Meal?
     @State private var isAvailable = true // eventually get this to meal model
     
@@ -21,7 +23,9 @@ struct MatchedDetailView: View {
                     .padding(.horizontal)
                 
                 HStack {
-                    Button(action: { }) {
+                    Button {
+                        showingChat = true
+                    } label: {
                         styledLabel("Chat with User",
                                     systemImage: "bubble.right",
                                     color: .init(uiColor: .systemGray6))
@@ -35,12 +39,14 @@ struct MatchedDetailView: View {
                 }
                 .opacity(isAvailable ? 1 : 0.6)
                 .padding(.top)
-                
-                
-                // TODO: Additional details, chat history shown below
-                
             }
             .padding()
+        }
+        .sheet(isPresented: $showingChat) {
+            if let meal {
+                ChatView(meal: meal, isMocked: true)
+                    .environment(authManager)
+            }
         }
     }
     
