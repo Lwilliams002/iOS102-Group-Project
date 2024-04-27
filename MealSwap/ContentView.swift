@@ -17,6 +17,7 @@ struct ContentView: View {
             CreateMealView()
                 .tabItem { Label("Post New", systemImage: "plus.circle") }
             MatchedView()
+                .environment(authManager)
                 .tabItem { Label("Swap Meals", systemImage: "arrow.left.arrow.right") }
             SettingsView()
                 .environment(authManager)

@@ -35,7 +35,6 @@ struct MealCard: View {
             }
         }
         .aspectRatio(7/12, contentMode: .fill)
-//        .animation(.easeInOut, value: meal)
     }
     
     private func titleLabel(text: String) -> some View {

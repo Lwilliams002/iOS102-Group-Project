@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct MatchedDetailView: View {
+    @Environment(AuthManager.self) var authManager: AuthManager
+    
     @Binding var meal: Meal?
     @State private var isAvailable = true // eventually get this to meal model
     
     @State private var showingChat = false
+    @State private var showingSwappedConfirmation = false
     
     var body: some View {
         ScrollView {
@@ -21,26 +24,40 @@ struct MatchedDetailView: View {
                     .padding(.horizontal)
                 
                 HStack {
-                    Button(action: { }) {
+                    Button {
+                        showingChat = true
+                    } label: {
                         styledLabel("Chat with User",
                                     systemImage: "bubble.right",
                                     color: .init(uiColor: .systemGray6))
                     }
                     .foregroundStyle(.primary)
                     Spacer()
-                    styledLabel(isAvailable ? "Available" : "Unavailable", 
-                                systemImage: isAvailable ? "checkmark" : "xmark",
-                                color: isAvailable ? .green : .red)
+                    Button {
+                        showingSwappedConfirmation = true
+                    } label: {
+                        styledLabel(isAvailable ? "Available" : "Unavailable",
+                                    systemImage: isAvailable ? "checkmark" : "xmark",
+                                    color: isAvailable ? .green : .red)
+                    }
                     
                 }
                 .opacity(isAvailable ? 1 : 0.6)
                 .padding(.top)
-                
-                
-                // TODO: Additional details, chat history shown below
-                
             }
             .padding()
+        }
+        .sheet(isPresented: $showingChat) {
+            if let meal {
+                ChatView(meal: meal, isMocked: true)
+                    .environment(authManager)
+            }
+        }
+        .alert(isPresented: $showingSwappedConfirmation) {
+            Alert(title: Text("Confirm Swap"),
+                  message: Text("Finalize your agreement to swap?"),
+                  primaryButton: .destructive(Text("Confirm"), action: markAsSwapped),
+                  secondaryButton: .cancel())
         }
     }
     
@@ -66,6 +83,12 @@ struct MatchedDetailView: View {
                     .padding(5)
             }
         }
+    }
+    
+    private func markAsSwapped() {
+        // TODO: - eventually should change meal model
+        
+        isAvailable.toggle() // for now, just toggling UI property
     }
 }
 

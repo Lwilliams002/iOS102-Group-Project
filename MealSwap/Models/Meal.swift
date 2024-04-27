@@ -92,6 +92,8 @@ struct Meal: Codable, Identifiable, Equatable {
     }
     
     static let example = try? Meal(fromAPIMeal: .example!)
+    static let example2 = try? Meal(fromAPIMeal: .example2!)
+    static let example3 = try? Meal(fromAPIMeal: .example3!)
 }
 
 // MARK: - API stuff (just for mock meal data)
@@ -125,13 +127,17 @@ struct MealsAPIItem: Codable {
     let strIngredient19: String
     let strIngredient20: String
     
-    static var example: MealsAPIItem? {
-        guard let fileURL = Bundle.main.url(forResource: "example-meal", withExtension: "json") else { return nil }
+    static var examples: [MealsAPIItem] {
+        guard let fileURL = Bundle.main.url(forResource: "example-meal", withExtension: "json") else { return [] }
         if let data = try? Data(contentsOf: fileURL) {
             if let json = try? JSONDecoder().decode(MealsAPIResponse.self, from: data) {
-                return json.meals.first
+                return json.meals
             }
         }
-        return nil
+        return []
     }
+    
+    static var example: MealsAPIItem? { examples.first }
+    static var example2: MealsAPIItem? { examples[1] }
+    static var example3: MealsAPIItem? { examples[2] }
 }
