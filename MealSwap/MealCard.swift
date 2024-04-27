@@ -10,13 +10,17 @@ import SwiftUI
 struct MealCard: View {
     @Binding var meal: Meal?
     
+    var smallTextDisplay: Bool = false
+    
     var body: some View {
         VStack {
             if let meal {
                 VStack {
                     HStack {
                         titleLabel(text: meal.title)
-                        Spacer()
+                        if !smallTextDisplay {
+                            Spacer()
+                        }
                     }
                     Spacer()
                 }
@@ -30,14 +34,15 @@ struct MealCard: View {
                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
             }
         }
-        .frame(width: 350, height: 600)
+        .aspectRatio(7/12, contentMode: .fill)
 //        .animation(.easeInOut, value: meal)
     }
     
     private func titleLabel(text: String) -> some View {
         Text(text)
-            .font(.largeTitle)
+            .font(smallTextDisplay ? .body : .largeTitle)
             .fontWeight(.medium)
+            .multilineTextAlignment(.leading)
             .foregroundStyle(.white)
             .shadow(radius: 5)
             .padding()
@@ -56,4 +61,5 @@ struct MealCard: View {
 
 #Preview {
     MealCard(meal: .constant(Meal.example))
+        .frame(width: 350, height: 600)
 }
