@@ -5,6 +5,7 @@
 //  Created by Jon Toussaint on 4/18/24.
 //
 
+import PhotosUI
 import SwiftUI
 
 struct CreateMealView: View {
@@ -13,6 +14,9 @@ struct CreateMealView: View {
     @State private var ingredients = [String]()
     
     @State private var newIngredient = ""
+    
+    @State private var photoItem: PhotosPickerItem?
+    @State private var photo: UIImage?
     
     @State private var showingPostedAlert = false
     
@@ -29,6 +33,31 @@ struct CreateMealView: View {
                     descriptionField
                 }
                 ingredientSection
+                
+                Section("Photo") {
+                    HStack {
+                        PhotosPicker("Add from Library...", selection: $photoItem, matching: .images)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                        Image(systemName: "camera")
+                    }
+                    if let photo {
+                        Image(uiImage: photo)
+                            .resizable()
+                            .scaledToFit()
+                    }
+                }
+                .onChange(of: photoItem) { _, newValue in
+                    Task {
+                        if let loaded = try? await newValue?.loadTransferable(type: Data.self) {
+                            let uiImage = UIImage(data: loaded)
+                            photo = uiImage
+                        } else {
+                            print("Failed to load image")
+                        }
+                    }
+                }
+                
             }
             .navigationTitle("Offer\(title.isEmpty ? " New Meal" : "ing \(title)")")
             .safeAreaInset(edge: .bottom) {
@@ -46,6 +75,7 @@ struct CreateMealView: View {
     
     private func postMeal() {
         let meal = Meal(title: title, description: description, ingredients: ingredients)
+        // TODO: - persist uploaded photo data in meal object as Data
         // TODO: - add meal to database
         print("Posting \(meal)")
         
