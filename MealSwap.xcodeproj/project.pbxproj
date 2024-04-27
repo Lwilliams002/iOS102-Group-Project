@@ -14,13 +14,13 @@
 		03F631702BD357DB00698C99 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F6316F2BD357DB00698C99 /* SignUpView.swift */; };
 		1518EDBB2BD9EB230094BF09 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1518EDBA2BD9EB230094BF09 /* MatchedView.swift */; };
 		1518EDBD2BDC3A0A0094BF09 /* MatchedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1518EDBC2BDC3A0A0094BF09 /* MatchedDetailView.swift */; };
+		1518EDC02BDCA56E0094BF09 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1518EDBF2BDCA56E0094BF09 /* FirebaseAuth */; };
+		1518EDC22BDCA56E0094BF09 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1518EDC12BDCA56E0094BF09 /* FirebaseFirestore */; };
+		1518EDC42BDCA56E0094BF09 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1518EDC32BDCA56E0094BF09 /* FirebaseFirestoreSwift */; };
 		15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2C2BCAFE94008A9BDB /* MealSwapApp.swift */; };
 		15276A2F2BCAFE94008A9BDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15276A2E2BCAFE94008A9BDB /* ContentView.swift */; };
 		15276A312BCAFE96008A9BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A302BCAFE96008A9BDB /* Assets.xcassets */; };
 		15276A342BCAFE96008A9BDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15276A332BCAFE96008A9BDB /* Preview Assets.xcassets */; };
-		159919E62BD443840036D02F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 159919E52BD443840036D02F /* FirebaseAuth */; };
-		159919E82BD443840036D02F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 159919E72BD443840036D02F /* FirebaseFirestore */; };
-		159919EA2BD443840036D02F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 159919E92BD443840036D02F /* FirebaseFirestoreSwift */; };
 		159B817C2BD2012E000E7CF4 /* CreateMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B817B2BD2012E000E7CF4 /* CreateMealView.swift */; };
 		159B817E2BD207CD000E7CF4 /* MealCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B817D2BD207CD000E7CF4 /* MealCard.swift */; };
 		159B818D2BD21A2A000E7CF4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B818C2BD21A2A000E7CF4 /* Meal.swift */; };
@@ -53,9 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				159919E62BD443840036D02F /* FirebaseAuth in Frameworks */,
-				159919E82BD443840036D02F /* FirebaseFirestore in Frameworks */,
-				159919EA2BD443840036D02F /* FirebaseFirestoreSwift in Frameworks */,
+				1518EDC02BDCA56E0094BF09 /* FirebaseAuth in Frameworks */,
+				1518EDC22BDCA56E0094BF09 /* FirebaseFirestore in Frameworks */,
+				1518EDC42BDCA56E0094BF09 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +94,9 @@
 				159B817B2BD2012E000E7CF4 /* CreateMealView.swift */,
 				ADD70FCF2BD1B9520010165D /* MealFeed.swift */,
 				159B817D2BD207CD000E7CF4 /* MealCard.swift */,
-				159B818E2BD22590000E7CF4 /* example-meal.json */,
 				1518EDBA2BD9EB230094BF09 /* MatchedView.swift */,
 				1518EDBC2BDC3A0A0094BF09 /* MatchedDetailView.swift */,
+				159B818E2BD22590000E7CF4 /* example-meal.json */,
 			);
 			path = MealSwap;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 			);
 			name = MealSwap;
 			packageProductDependencies = (
-				159919E52BD443840036D02F /* FirebaseAuth */,
-				159919E72BD443840036D02F /* FirebaseFirestore */,
-				159919E92BD443840036D02F /* FirebaseFirestoreSwift */,
+				1518EDBF2BDCA56E0094BF09 /* FirebaseAuth */,
+				1518EDC12BDCA56E0094BF09 /* FirebaseFirestore */,
+				1518EDC32BDCA56E0094BF09 /* FirebaseFirestoreSwift */,
 			);
 			productName = MealSwap;
 			productReference = 15276A292BCAFE94008A9BDB /* MealSwap.app */;
@@ -167,7 +167,7 @@
 			);
 			mainGroup = 15276A202BCAFE94008A9BDB;
 			packageReferences = (
-				159919E42BD443840036D02F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1518EDBE2BDCA56E0094BF09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 15276A2A2BCAFE94008A9BDB /* Products */;
 			projectDirPath = "";
@@ -416,7 +416,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		159919E42BD443840036D02F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		1518EDBE2BDCA56E0094BF09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -427,19 +427,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		159919E52BD443840036D02F /* FirebaseAuth */ = {
+		1518EDBF2BDCA56E0094BF09 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 159919E42BD443840036D02F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 1518EDBE2BDCA56E0094BF09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		159919E72BD443840036D02F /* FirebaseFirestore */ = {
+		1518EDC12BDCA56E0094BF09 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 159919E42BD443840036D02F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 1518EDBE2BDCA56E0094BF09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		159919E92BD443840036D02F /* FirebaseFirestoreSwift */ = {
+		1518EDC32BDCA56E0094BF09 /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 159919E42BD443840036D02F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 1518EDBE2BDCA56E0094BF09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
