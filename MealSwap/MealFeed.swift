@@ -49,9 +49,6 @@ struct MealFeed: View {
     
     var body: some View {
         VStack{
-            buttonRow
-                .frame(width: 200)
-            
             ZStack {
                 ForEach(0..<meals.count, id: \.self) { index in
                     MealCard(meal: $meals[index])
@@ -65,6 +62,7 @@ struct MealFeed: View {
                                             .onChanged { gesture in
                                                 let translation = gesture.translation
                                                 offset = translation
+                                                print(offset)
                                             }
                                             .onEnded{ gesture in
                                                 if gesture.translation.width > swipeThreshold {
@@ -84,8 +82,33 @@ struct MealFeed: View {
                         }
                         .rotationEffect(.degrees(Double(meals.count - 1 - index) * -1))
                 }
+                HStack(alignment: .center) {
+                    arrow(facing: .left)
+                        .opacity(offset.width < 0 ? 1.0 : 0)
+                        .padding(.top, 30)
+                    arrow(facing: .right)
+                        .opacity(offset.width > 0 ? 1.0 : 0)
+                        .padding(.bottom, 30)
+                }
+                .animation(.easeInOut, value: offset.width)
+                
             }
             .padding(.horizontal)
+            
+            Spacer()
+            
+        }
+        .safeAreaInset(edge: .top) {
+            VStack {
+                Image("MealSwapLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 40)
+                buttonRow
+                    .frame(width: 200)
+                    .padding(.top, -10)
+            }
+            .frame(width: 200)
             
         }
         .task{
@@ -107,17 +130,45 @@ struct MealFeed: View {
         print(meals.map { $0?.title })
     }
     
+    private func arrow(facing direction: SwipeDirection) -> some View {
+        Image("arrow")
+            .renderingMode(direction == .right ? .original : .template)
+            .resizable()
+            .scaledToFit()
+            .foregroundStyle(direction == .right ? .primary : Color.red)
+            .rotationEffect(direction == .right ? .degrees(180) : .zero)
+            .shadow(radius: 8)
+    }
+    
+    private func feedTypeButton(_ text: String, isActive: Bool) -> some View {
+        Button(action: {}) {
+            Text(text)
+                .foregroundStyle(isActive ? .accent : .secondary)
+                .font(.headline)
+                .fontWeight(.bold)
+                .padding()
+                .background(
+                    Capsule()
+                        .foregroundStyle(isActive ? .accent.opacity(0.1) : .clear)
+                        .frame(height: 30)
+                )
+        }
+    }
+    
     private var buttonRow: some View {
         HStack{
-            Button("Feed") { }
-                .frame(width: 120, height: 50)
+            feedTypeButton("Feed", isActive: true)
             Spacer()
-            Button("Follower") { }
-                .frame(width: 120, height: 50)
+            feedTypeButton("Follower", isActive: false)
         }
-        .foregroundColor(.primary)
-        .font(.title3)
-        .fontWeight(.bold)
+        .padding(.horizontal, 3)
+        .background(
+            RoundedRectangle(cornerRadius: 25.0)
+                .foregroundStyle(.thickMaterial)
+                .frame(height: 35)
+        )
+        
+        
     }
 }
 
