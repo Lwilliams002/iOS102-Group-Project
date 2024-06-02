@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChatView: View {
     @Environment(AuthManager.self) var authManager
+    @Environment(\.dismiss) var dismiss
     
     let meal: Meal // the meal this chat is about -- lets us know which user this chat is with
     
@@ -33,8 +34,8 @@ struct ChatView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
-                    Button("Sign out") {
-                        authManager.signOut()
+                    Button("Close") {
+                        dismiss()
                     }
                 }
             }

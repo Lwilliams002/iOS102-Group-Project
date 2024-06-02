@@ -84,6 +84,7 @@ struct CreateMealView: View {
         title = ""
         description = ""
         ingredients = []
+        photo = nil
     }
     
     private var ingredientSection: some View {
