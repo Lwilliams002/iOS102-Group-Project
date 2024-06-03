@@ -40,6 +40,9 @@ struct Meal: Codable, Identifiable, Equatable {
     let photoURL: String?
     let photoData: [Data]
     
+    // Mocked display string, would store a numerical type eventually
+    var distanceString: String = Meal.getRandomDistanceString()
+    
     init(id: String? = nil, title: String, description: String, ingredients: [String], photoURL: String? = nil, photoData: [Data] = []) {
         if let id {
             self.id = id
@@ -94,6 +97,12 @@ struct Meal: Codable, Identifiable, Equatable {
     static let example = try? Meal(fromAPIMeal: .example!)
     static let example2 = try? Meal(fromAPIMeal: .example2!)
     static let example3 = try? Meal(fromAPIMeal: .example3!)
+    
+    /// Mocked distance string
+    static func getRandomDistanceString() -> String {
+        let distance = Double.random(in: 0.5..<13.0)
+        return String(format: "%.1f miles away", distance)
+    }
 }
 
 // MARK: - API stuff (just for mock meal data)

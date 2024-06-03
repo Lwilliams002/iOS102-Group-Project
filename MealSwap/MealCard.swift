@@ -35,6 +35,7 @@ struct MealCard: View {
             }
         }
         .aspectRatio(7/12, contentMode: .fill)
+        .overlay(bottomTrailingLabel(meal?.distanceString ?? "Unknown distance"))
     }
     
     private func titleLabel(text: String) -> some View {
@@ -54,6 +55,22 @@ struct MealCard: View {
         ZStack {
             Color.gray.opacity(0.5)
             ProgressView().font(.largeTitle)
+        }
+    }
+    
+    private func bottomTrailingLabel(_ text: String) -> some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Text(text)
+                    .font(.caption)
+                    .foregroundStyle(.primary)
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .clipShape(Capsule())
+                    .padding(5)
+            }
         }
     }
 }
