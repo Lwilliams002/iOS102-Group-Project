@@ -1,5 +1,9 @@
 # MealSwap
 
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/mealswap-20240602.gif" width=300>
+
+
+
 ## Table of Contents
 
 1. [Overview](#Overview)
