@@ -90,7 +90,7 @@ struct MealFeed: View {
                         .opacity(offset.width > 0 ? 1.0 : 0)
                         .padding(.bottom, 30)
                 }
-                .animation(.easeInOut, value: offset.width)
+                .animation(.easeIn, value: offset.width)
                 
             }
             .padding(.horizontal)
@@ -137,7 +137,7 @@ struct MealFeed: View {
             .scaledToFit()
             .foregroundStyle(direction == .right ? .primary : Color.red)
             .rotationEffect(direction == .right ? .degrees(180) : .zero)
-            .shadow(radius: 8)
+            .shadow(radius: 8, x: -5, y: -5)
     }
     
     private func feedTypeButton(_ text: String, isActive: Bool) -> some View {

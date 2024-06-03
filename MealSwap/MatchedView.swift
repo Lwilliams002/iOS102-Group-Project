@@ -29,6 +29,7 @@ struct MatchedView: View {
                         } label: {
                             MealCard(meal: self.mealStore.bindingForIndex(index), smallTextDisplay: true)
                         }
+                        .foregroundStyle(Color.primary)
                     }
                     .padding(10)
                 }

@@ -20,7 +20,6 @@ struct MatchedDetailView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 MealCard(meal: $meal)
-                    .overlay(bottomTrailingLabel("4.4 miles away"))
                     .padding(.horizontal)
                 
                 HStack {
@@ -67,22 +66,6 @@ struct MatchedDetailView: View {
             .padding()
             .background(color)
             .clipShape(.capsule)
-    }
-    
-    private func bottomTrailingLabel(_ text: String) -> some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Text(text)
-                    .font(.caption)
-                    .foregroundStyle(.primary)
-                    .padding()
-                    .background(.ultraThinMaterial)
-                    .clipShape(Capsule())
-                    .padding(5)
-            }
-        }
     }
     
     private func markAsSwapped() {
