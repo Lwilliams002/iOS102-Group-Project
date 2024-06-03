@@ -1,14 +1,14 @@
 # MealSwap
 
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/mealswap-20240602.gif" width=300>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/mealswap-20240602.gif" width=300>
 
 <div>
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.02.37.png" width=250>
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.03.45.png" width=250>
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.07.38.png" width=250>
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2020.26.13.png" width=250>
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.08.13.png" width=250>
-<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/update-gif-screenshots/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2020.25.58.png" width=250>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.02.37.png" width=250>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.03.45.png" width=250>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.07.38.png" width=250>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2020.26.13.png" width=250>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2021.08.13.png" width=250>
+<img src="https://github.com/Lwilliams002/iOS102-Group-Project/blob/main/screenshot/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-06-02%20at%2020.25.58.png" width=250>
 </div>
 
 ## Table of Contents
