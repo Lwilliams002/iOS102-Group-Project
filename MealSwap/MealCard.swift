@@ -9,35 +9,33 @@ import SwiftUI
 
 struct MealCard: View {
     @Binding var meal: Meal?
-    
+    @State private var selectedMeal: Meal?
     var smallTextDisplay: Bool = false
     
     var body: some View {
         VStack {
             if let meal {
-                NavigationLink(destination: MealCardDetail(meal: $meal)){
-                    VStack {
-                        HStack {
-                            titleLabel(text: meal.title)
-                            if !smallTextDisplay {
-                                Spacer()
-                            }
+                VStack {
+                    HStack {
+                        titleLabel(text: meal.title)
+                        if !smallTextDisplay {
+                            Spacer()
                         }
-                        Spacer()
                     }
-                    .background(
-                        AsyncImage(url: URL(string: meal.photoURL ?? "")) { image in
-                            image
-                                .resizable()
-                                .scaledToFill()
-                        } placeholder: { loadingImageView }
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                    Spacer()
                 }
+                .background(
+                    AsyncImage(url: URL(string: meal.photoURL ?? "")) { image in
+                        image
+                            .resizable()
+                            .scaledToFill()
+                    } placeholder: { loadingImageView }
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 25.0))
             }
         }
         .aspectRatio(7/12, contentMode: .fill)
-        .overlay(bottomTrailingLabel(meal?.distanceString ?? "Unknown distance"))
+        .overlay(bottomTrailingLabel(meal?.distanceString ?? "Unknown distance"))            
     }
     
     private func titleLabel(text: String) -> some View {

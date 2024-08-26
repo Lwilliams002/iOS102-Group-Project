@@ -47,6 +47,7 @@ struct MealFeed: View {
     @State private var offset: CGSize = .zero
     private let swipeThreshold: Double = 200
     
+    @State private var selectedMeal: Meal?
     var body: some View {
         VStack{
             ZStack {
@@ -58,27 +59,33 @@ struct MealFeed: View {
                                 .rotationEffect(.degrees(offset.width / 20.0))
                                 .opacity(3 - abs(offset.width) / swipeThreshold * 3)
                                 .offset(CGSize(width: offset.width, height: 0))
+                                .onTapGesture {
+                                    selectedMeal = meals[index]
+                                }
+                                .sheet(item: $selectedMeal){meal in
+                                    MealCardDetail(meal: $selectedMeal)
+                                }
                                 .gesture(DragGesture()
-                                            .onChanged { gesture in
-                                                let translation = gesture.translation
-                                                offset = translation
-                                                print(offset)
-                                            }
-                                            .onEnded{ gesture in
-                                                if gesture.translation.width > swipeThreshold {
-                                                    swiped(.right)
+                                        .onChanged { gesture in
+                                            let translation = gesture.translation
+                                            offset = translation
+                                            print(offset)
+                                        }
+                                        .onEnded{ gesture in
+                                            if gesture.translation.width > swipeThreshold {
+                                                swiped(.right)
+                                                offset = .zero
+                                            } else if gesture.translation.width < -swipeThreshold {
+                                                swiped(.left)
+                                                offset = .zero
+                                            } else {
+                                                print("🚫 Swipe canceled")
+                                                withAnimation(.bouncy) {
                                                     offset = .zero
-                                                } else if gesture.translation.width < -swipeThreshold {
-                                                    swiped(.left)
-                                                    offset = .zero
-                                                } else {
-                                                    print("🚫 Swipe canceled")
-                                                    withAnimation(.bouncy) {
-                                                        offset = .zero
-                                                    }
                                                 }
                                             }
-                                        )
+                                        }
+                                    )
                         }
                         .rotationEffect(.degrees(Double(meals.count - 1 - index) * -1))
                 }

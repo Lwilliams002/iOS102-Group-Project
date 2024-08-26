@@ -120,7 +120,7 @@ struct CreateMealView: View {
     }
     
     private func addInstruction() {
-        var instruction = newInstruction.trimmingCharacters(in: .whitespacesAndNewlines)
+        let instruction = newInstruction.trimmingCharacters(in: .whitespacesAndNewlines)
         guard instruction.isEmpty == false else { return }
         instructions.append(instruction)
         newInstruction = ""

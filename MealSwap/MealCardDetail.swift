@@ -21,9 +21,6 @@ struct MealCardDetail: View{
                     VStack {
                         HStack {
                             titleLabel(text: meal.title)
-                            if !smallTextDisplay {
-                                Spacer()
-                            }
                         }
                         Spacer()
                     }
@@ -47,7 +44,6 @@ struct MealCardDetail: View{
                 
             }
         }
-        .aspectRatio(7/12, contentMode: .fill)
         
     }
     

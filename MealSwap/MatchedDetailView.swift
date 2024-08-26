@@ -13,6 +13,7 @@ struct MatchedDetailView: View {
     @Binding var meal: Meal?
     @State private var isAvailable = true // eventually get this to meal model
     
+    @State private var selectedMeal: Meal?
     @State private var showingChat = false
     @State private var showingSwappedConfirmation = false
     
@@ -21,6 +22,14 @@ struct MatchedDetailView: View {
             VStack(alignment: .leading) {
                 MealCard(meal: $meal)
                     .padding(.horizontal)
+                    .onTapGesture {
+                        selectedMeal = meal
+                    }
+                    .sheet(item: $selectedMeal){meal in
+                        MealCardDetail(meal: .constant(meal))
+                            .frame(width: 350, height: 600)
+                    }
+                    
                 
                 HStack {
                     Button {
