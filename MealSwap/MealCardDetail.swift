@@ -1,21 +1,23 @@
 //
-//  MealCard.swift
+//  MealCardDetail.swift
 //  MealSwap
 //
-//  Created by Jon Toussaint on 4/18/24.
+//  Created by Lesly Williams on 8/25/24.
 //
 
 import SwiftUI
 
-struct MealCard: View {
+struct MealCardDetail: View{
     @Binding var meal: Meal?
-    
     var smallTextDisplay: Bool = false
     
     var body: some View {
-        VStack {
+        
+        ScrollView {
+            
             if let meal {
                 NavigationLink(destination: MealCardDetail(meal: $meal)){
+                    
                     VStack {
                         HStack {
                             titleLabel(text: meal.title)
@@ -25,19 +27,63 @@ struct MealCard: View {
                         }
                         Spacer()
                     }
-                    .background(
-                        AsyncImage(url: URL(string: meal.photoURL ?? "")) { image in
-                            image
-                                .resizable()
-                                .scaledToFill()
-                        } placeholder: { loadingImageView }
+                    .background(Color(uiColor: .clear)
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                 }
+                VStack{
+                    HStack{
+                        IngredientsView(ingredients: meal.ingredients)
+                        AsyncImage(url: URL(string: meal.photoURL ?? "")) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: { loadingImageView }
+                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                    }
+                    
+                    InstructionsView(instructions: meal.instructions)
+                }
+                
             }
         }
         .aspectRatio(7/12, contentMode: .fill)
-        .overlay(bottomTrailingLabel(meal?.distanceString ?? "Unknown distance"))
+        
+    }
+    
+    struct IngredientsView: View {
+        var ingredients: [String]
+        
+        var body: some View {
+            VStack(alignment: .leading) {
+                ForEach(0..<ingredients.count, id: \.self) { index in
+                    HStack {
+                        Text("\(index + 1). \(ingredients[index])")
+                    }
+                    .padding(.vertical, 1)
+                }
+            }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.1)))
+        }
+    }
+    struct InstructionsView: View {
+    
+        var instructions: [String]
+        
+        var body: some View {
+            VStack(alignment: .leading) {
+                ForEach(0..<instructions.count, id: \.self) { index in
+                    HStack {
+                        
+                        Text("\(index + 1). \(instructions[index])")
+                    }
+                    .padding(.vertical, 2)
+                }
+            }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.1)))
+        }
     }
     
     private func titleLabel(text: String) -> some View {
@@ -45,7 +91,7 @@ struct MealCard: View {
             .font(smallTextDisplay ? .body : .largeTitle)
             .fontWeight(.medium)
             .multilineTextAlignment(.leading)
-            .foregroundStyle(.white)
+            .foregroundStyle(.black)
             .shadow(radius: 5)
             .padding()
             .background(.ultraThinMaterial)
@@ -77,7 +123,7 @@ struct MealCard: View {
     }
 }
 
-#Preview {
-    MealCard(meal: .constant(Meal.example))
+#Preview{
+    MealCardDetail(meal: .constant(Meal.example))
         .frame(width: 350, height: 600)
 }

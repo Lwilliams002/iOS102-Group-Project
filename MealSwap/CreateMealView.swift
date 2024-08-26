@@ -12,8 +12,10 @@ struct CreateMealView: View {
     @State private var title = ""
     @State private var description = ""
     @State private var ingredients = [String]()
+    @State private var instructions = [String]()
     
     @State private var newIngredient = ""
+    @State private var newInstruction = ""
     
     @State private var photoItem: PhotosPickerItem?
     @State private var photo: UIImage?
@@ -32,6 +34,7 @@ struct CreateMealView: View {
                     TextField("Title", text: $title)
                     descriptionField
                 }
+                instructionSection
                 ingredientSection
                 
                 Section("Photo") {
@@ -74,7 +77,8 @@ struct CreateMealView: View {
     }
     
     private func postMeal() {
-        let meal = Meal(title: title, description: description, ingredients: ingredients)
+        // TODO: - add instructions to database
+        let meal = Meal(title: title, description: description, instructions: instructions, ingredients: ingredients)
         // TODO: - persist uploaded photo data in meal object as Data
         // TODO: - add meal to database
         print("Posting \(meal)")
@@ -83,8 +87,43 @@ struct CreateMealView: View {
         
         title = ""
         description = ""
+        instructions = []
         ingredients = []
         photo = nil
+    }
+    private var instructionSection: some View {
+        Section {
+            ForEach(instructions, id: \.self) { instruction in
+                Text(instruction)
+            }
+            .onDelete(perform: deleteInstruction)
+            
+            HStack {
+                TextField("Add Instruction", text: $newInstruction)
+                    .foregroundStyle(.secondary)
+                    .onSubmit { addInstruction() }
+                Button(action: addInstruction) {
+                    Image(systemName: "plus.circle.fill")
+                        .imageScale(.large)
+                        .foregroundStyle(Color.accentColor)
+                }
+            }
+        } header: {
+            Text("\(instructions.count) Instruction\(instructions.count == 1 ? "" : "s")")
+        } footer: {
+            Text("Please add all instructions needed to cook the meal.")
+        }
+    }
+    
+    private func deleteInstruction(at offsets: IndexSet) {
+        instructions.remove(atOffsets: offsets)
+    }
+    
+    private func addInstruction() {
+        var instruction = newInstruction.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard instruction.isEmpty == false else { return }
+        instructions.append(instruction)
+        newInstruction = ""
     }
     
     private var ingredientSection: some View {

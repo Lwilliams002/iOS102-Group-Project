@@ -29,6 +29,7 @@
 		159B818D2BD21A2A000E7CF4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B818C2BD21A2A000E7CF4 /* Meal.swift */; };
 		159B818F2BD22590000E7CF4 /* example-meal.json in Resources */ = {isa = PBXBuildFile; fileRef = 159B818E2BD22590000E7CF4 /* example-meal.json */; };
 		ADD70FD02BD1B9520010165D /* MealFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD70FCF2BD1B9520010165D /* MealFeed.swift */; };
+		ADF8C1C92C7C28C6004C56EA /* MealCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF8C1C82C7C28C6004C56EA /* MealCardDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		159B818C2BD21A2A000E7CF4 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		159B818E2BD22590000E7CF4 /* example-meal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "example-meal.json"; sourceTree = "<group>"; };
 		ADD70FCF2BD1B9520010165D /* MealFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeed.swift; sourceTree = "<group>"; };
+		ADF8C1C82C7C28C6004C56EA /* MealCardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				159B817B2BD2012E000E7CF4 /* CreateMealView.swift */,
 				ADD70FCF2BD1B9520010165D /* MealFeed.swift */,
 				159B817D2BD207CD000E7CF4 /* MealCard.swift */,
+				ADF8C1C82C7C28C6004C56EA /* MealCardDetail.swift */,
 				1518EDBA2BD9EB230094BF09 /* MatchedView.swift */,
 				1518EDBC2BDC3A0A0094BF09 /* MatchedDetailView.swift */,
 				1518EDC72BDCAE440094BF09 /* ChatView.swift */,
@@ -217,6 +220,7 @@
 				1518EDBB2BD9EB230094BF09 /* MatchedView.swift in Sources */,
 				03F631702BD357DB00698C99 /* SignUpView.swift in Sources */,
 				159B817C2BD2012E000E7CF4 /* CreateMealView.swift in Sources */,
+				ADF8C1C92C7C28C6004C56EA /* MealCardDetail.swift in Sources */,
 				1518EDCA2BDCAF4E0094BF09 /* MessageManager.swift in Sources */,
 				1518EDCC2BDCAF7D0094BF09 /* Message.swift in Sources */,
 				15276A2D2BCAFE94008A9BDB /* MealSwapApp.swift in Sources */,

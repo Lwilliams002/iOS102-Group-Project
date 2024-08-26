@@ -36,6 +36,7 @@ struct Meal: Codable, Identifiable, Equatable {
     let id: String
     let title: String
     let description: String // for random API generated meals, will be instructions
+    let instructions: [String]
     let ingredients: [String]
     let photoURL: String?
     let photoData: [Data]
@@ -43,7 +44,7 @@ struct Meal: Codable, Identifiable, Equatable {
     // Mocked display string, would store a numerical type eventually
     var distanceString: String = Meal.getRandomDistanceString()
     
-    init(id: String? = nil, title: String, description: String, ingredients: [String], photoURL: String? = nil, photoData: [Data] = []) {
+    init(id: String? = nil, title: String, description: String, instructions: [String], ingredients: [String], photoURL: String? = nil, photoData: [Data] = []) {
         if let id {
             self.id = id
         } else {
@@ -51,6 +52,7 @@ struct Meal: Codable, Identifiable, Equatable {
         }
         self.title = title
         self.description = description
+        self.instructions = instructions
         self.ingredients = ingredients
         self.photoURL = photoURL
         self.photoData = photoData
@@ -65,6 +67,7 @@ struct Meal: Codable, Identifiable, Equatable {
         
         // Gather ingredients
         var ingredients: [String] = []
+        
         let mirror = Mirror(reflecting: apiMeal)
         
         for child in mirror.children {
@@ -75,6 +78,18 @@ struct Meal: Codable, Identifiable, Equatable {
             }
         }
         self.ingredients = ingredients
+        
+        // Gather instructions
+        var instructions: [String] = []
+        
+        for child in mirror.children{
+            if let property = child.label, property.contains(try Regex("strInstructions")){
+                if let instructionStr = child.value as? String, !instructionStr.isEmpty{
+                    instructions.append(contentsOf: instructionStr.components(separatedBy: "\n"))
+                }
+            }
+        }
+        self.instructions = instructions
     }
     
     static func fetchRandom() async -> Meal? {
